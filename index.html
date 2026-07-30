@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineer Portfolio - Minimalist Monospace Tech Portfolio">
+    <title>&lt;SoftwareEngineer /&gt; | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ambient Canvas Background -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="prompt-symbol">&gt;</span> dev@portfolio:<span class="path">~</span>$
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+                [MENU]
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-item">[ 01.about ]</a>
+                <a href="#skills" class="nav-item">[ 02.skills ]</a>
+                <a href="#projects" class="nav-item">[ 03.projects ]</a>
+                <a href="#experience" class="nav-item">[ 04.experience ]</a>
+                <a href="#terminal" class="nav-item">[ 05.cli ]</a>
+                <a href="#contact" class="nav-item">[ 06.contact ]</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-dot"></span>
+                        <span class="btn-dot"></span>
+                        <span class="btn-dot"></span>
+                    </div>
+                    <div class="terminal-title">bash - 80x24</div>
+                    <div class="terminal-status">[ONLINE]</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="console-line">
+                        <span class="prompt">user@dev-machine:~$</span> <span class="command">whoami</span>
+                    </div>
+                    <h1 class="hero-name">[YOUR_NAME_HERE]</h1>
+                    <div class="console-line">
+                        <span class="prompt">user@dev-machine:~$</span> <span class="command">cat role.txt</span>
+                    </div>
+                    <div class="hero-title-container">
+                        <h2 class="hero-title" id="typing-title">Software Engineer &amp; Systems Architect</h2>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+                    
+                    <p class="hero-bio">
+                        &gt; Specializing in scalable web applications, distributed systems, and clean code architecture.<br>
+                        &gt; Passionate about building robust software, optimizing performance, and elegant user interfaces.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">[ VIEW_PROJECTS ]</a>
+                        <a href="#contact" class="btn btn-secondary">[ CONTACT_ME ]</a>
+                        <a href="#terminal" class="btn btn-outline">[ OPEN_CLI ]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats Banner -->
+        <section class="stats-banner">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-years">05+</div>
+                    <div class="stat-label">YEARS_EXPERIENCE</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-projects">20+</div>
+                    <div class="stat-label">PROJECTS_SHIPPED</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-commits">1.2k</div>
+                    <div class="stat-label">COMMITS_THIS_YEAR</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-uptime">99.9%</div>
+                    <div class="stat-label">SYSTEM_UPTIME</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2><span class="section-num">01.</span> // ABOUT_ME</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="paragraph">
+                        Hello! I'm <strong class="highlight">[YOUR_NAME_HERE]</strong>, a Software Engineer based in <strong class="highlight">[YOUR_LOCATION_HERE]</strong>. I craft high-performance applications, maintain clean architectures, and solve complex programmatic challenges.
+                    </p>
+                    <p class="paragraph">
+                        [PLACEHOLDER_PARAGRAPH_1: Insert your professional background details here. Mention your journey into programming, education, core technical philosophies, or primary domains of expertise like backend engineering, frontend development, or cloud systems.]
+                    </p>
+                    <p class="paragraph">
+                        [PLACEHOLDER_PARAGRAPH_2: Detail what drives you as a developer—whether it's open-source contribution, system optimization, microservices, or building intuitive tools that make developers' lives easier.]
+                    </p>
+
+                    <div class="quick-facts">
+                        <h3>/// QUICK_SPECIFICATIONS</h3>
+                        <ul class="facts-list">
+                            <li><span class="key">Degree:</span> <span class="val">[B.S. in Computer Science / Equivalent]</span></li>
+                            <li><span class="key">Primary Focus:</span> <span class="val">[Full-Stack / Systems / DevOps]</span></li>
+                            <li><span class="key">Location:</span> <span class="val">[City, Country / Remote]</span></li>
+                            <li><span class="key">Availability:</span> <span class="val">[Open for Opportunities / Consulting]</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="code-box">
+                        <div class="code-box-header">
+                            <span>developer_profile.json</span>
+                            <span>UTF-8</span>
+                        </div>
+                        <pre class="code-block"><code>{
+  <span class="json-key">"name"</span>: <span class="json-str">"[YOUR_NAME]"</span>,
+  <span class="json-key">"title"</span>: <span class="json-str">"Software Engineer"</span>,
+  <span class="json-key">"status"</span>: <span class="json-str">"Coding &amp; Building"</span>,
+  <span class="json-key">"passions"</span>: [
+    <span class="json-str">"Clean Code"</span>,
+    <span class="json-str">"System Performance"</span>,
+    <span class="json-str">"Developer Tools"</span>,
+    <span class="json-str">"Open Source"</span>
+  ],
+  <span class="json-key">"coffee_level"</span>: <span class="json-str">"100%"</span>,
+  <span class="json-key">"editor"</span>: <span class="json-str">"Neovim / VS Code"</span>,
+  <span class="json-key">"os"</span>: <span class="json-str">"Linux / macOS"</span>
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2><span class="section-num">02.</span> // TECH_STACK &amp; SKILLS</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="skills-filter">
+                <button class="filter-btn active" data-category="all">[ ALL_SKILLS ]</button>
+                <button class="filter-btn" data-category="languages">[ LANGUAGES ]</button>
+                <button class="filter-btn" data-category="frontend">[ FRONTEND ]</button>
+                <button class="filter-btn" data-category="backend">[ BACKEND ]</button>
+                <button class="filter-btn" data-category="devops">[ DEVOPS &amp; TOOLS ]</button>
+            </div>
+
+            <div class="skills-grid" id="skills-container">
+                <!-- Skill Category: Languages -->
+                <div class="skill-category" data-category="languages">
+                    <h3 class="category-title">/ LANGUAGES</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> JavaScript / TypeScript</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Python</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> C++ / Rust</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Go</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> SQL / PostgreSQL</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> HTML5 / CSS3</div>
+                    </div>
+                </div>
+
+                <!-- Skill Category: Frontend -->
+                <div class="skill-category" data-category="frontend">
+                    <h3 class="category-title">/ FRONTEND</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> React.js / Next.js</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Vue.js</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> WebGL / Canvas API</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> State Management (Redux/Zustand)</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> WebSockets</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Responsive UI / Web Standards</div>
+                    </div>
+                </div>
+
+                <!-- Skill Category: Backend -->
+                <div class="skill-category" data-category="backend">
+                    <h3 class="category-title">/ BACKEND &amp; DATABASES</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Node.js / Express</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Python (FastAPI / Django)</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> RESTful &amp; GraphQL APIs</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> PostgreSQL / MySQL</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> MongoDB / Redis</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Microservices Architecture</div>
+                    </div>
+                </div>
+
+                <!-- Skill Category: DevOps -->
+                <div class="skill-category" data-category="devops">
+                    <h3 class="category-title">/ DEVOPS &amp; INFRASTRUCTURE</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Docker &amp; Kubernetes</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Git / GitHub Actions / CI/CD</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> AWS / Cloud Infrastructure</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Linux Administration &amp; Bash</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Nginx / Web Servers</div>
+                        <div class="skill-tag"><span class="tag-icon">&gt;</span> Performance Benchmarking</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2><span class="section-num">03.</span> // FEATURED_PROJECTS</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="projects-filter">
+                <button class="proj-filter-btn active" data-filter="all">[ ALL_PROJECTS ]</button>
+                <button class="proj-filter-btn" data-filter="web">[ WEB_APPS ]</button>
+                <button class="proj-filter-btn" data-filter="systems">[ SYSTEMS ]</button>
+                <button class="proj-filter-btn" data-filter="tools">[ CLI_TOOLS ]</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-type">WEB_APP</div>
+                        <div class="project-status">[STABLE]</div>
+                    </div>
+                    <h3 class="project-title">[PROJECT_NAME_1]</h3>
+                    <p class="project-desc">
+                        [PLACEHOLDER_DESCRIPTION: High-performance real-time analytics engine built with Node.js and WebSockets. Provides live data visualization and sub-millisecond metrics processing.]
+                    </p>
+                    <div class="project-features">
+                        <div>+ Real-time data streaming &amp; dashboard</div>
+                        <div>+ Sub-50ms query responses</div>
+                        <div>+ Automated deployment pipeline</div>
+                    </div>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>Node.js</span>
+                        <span>WebSockets</span>
+                        <span>Redis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link" onclick="openProjectModal('project1'); return false;">[ DETAILS ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ DEMO ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-category="systems">
+                    <div class="project-header">
+                        <div class="project-type">DISTRIBUTED_SYSTEMS</div>
+                        <div class="project-status">[STABLE]</div>
+                    </div>
+                    <h3 class="project-title">[PROJECT_NAME_2]</h3>
+                    <p class="project-desc">
+                        [PLACEHOLDER_DESCRIPTION: Distributed Key-Value Store implemented in Rust. Features Raft consensus algorithm, log replication, and memory efficient storage indexing.]
+                    </p>
+                    <div class="project-features">
+                        <div>+ Raft Consensus implementation</div>
+                        <div>+ Fault-tolerant log replication</div>
+                        <div>+ High throughput benchmark results</div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Rust</span>
+                        <span>Distributed Systems</span>
+                        <span>gRPC</span>
+                        <span>Raft</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link" onclick="openProjectModal('project2'); return false;">[ DETAILS ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ DEMO ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-category="tools">
+                    <div class="project-header">
+                        <div class="project-type">CLI_TOOL</div>
+                        <div class="project-status">[v1.2.0]</div>
+                    </div>
+                    <h3 class="project-title">[PROJECT_NAME_3]</h3>
+                    <p class="project-desc">
+                        [PLACEHOLDER_DESCRIPTION: Lightweight CLI developer utility for automated repository auditing and dependency security scanning with instant terminal reports.]
+                    </p>
+                    <div class="project-features">
+                        <div>+ Cross-platform terminal binary</div>
+                        <div>+ Parallel multi-file vulnerability scan</div>
+                        <div>+ Customizable output formats (JSON/Markdown)</div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Go</span>
+                        <span>CLI</span>
+                        <span>Security</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link" onclick="openProjectModal('project3'); return false;">[ DETAILS ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ DEMO ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-type">FULLSTACK_APP</div>
+                        <div class="project-status">[STABLE]</div>
+                    </div>
+                    <h3 class="project-title">[PROJECT_NAME_4]</h3>
+                    <p class="project-desc">
+                        [PLACEHOLDER_DESCRIPTION: Developer workflow hub featuring code collaboration snippet sharing, interactive API testing playground, and task tracking.]
+                    </p>
+                    <div class="project-features">
+                        <div>+ Collaborative code editor</div>
+                        <div>+ OAuth2 authentication &amp; RBAC</div>
+                        <div>+ Optimized database indexing</div>
+                    </div>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Python/FastAPI</span>
+                        <span>PostgreSQL</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link" onclick="openProjectModal('project4'); return false;">[ DETAILS ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ DEMO ]</a>
+                        <a href="#" class="proj-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <h2><span class="section-num">04.</span> // WORK_EXPERIENCE &amp; HISTORY</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">o</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Senior Software Engineer <span class="company">@ [COMPANY_NAME_1]</span></h3>
+                            <span class="job-date">[2024 - PRESENT]</span>
+                        </div>
+                        <p class="job-location">&gt; Location: [City, State / Remote]</p>
+                        <ul class="job-bullets">
+                            <li>[PLACEHOLDER: Led engineering team in migrating monolithic infrastructure to containerized microservices, improving deployment speed by 40%.]</li>
+                            <li>[PLACEHOLDER: Architected high-concurrency API layer handling millions of daily requests with 99.99% availability.]</li>
+                            <li>[PLACEHOLDER: Mentored junior engineers, established automated CI/CD testing pipelines, and refined code review practices.]</li>
+                        </ul>
+                        <div class="job-tech">
+                            <span>TypeScript</span> <span>Go</span> <span>Kubernetes</span> <span>AWS</span> <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">o</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Software Engineer <span class="company">@ [COMPANY_NAME_2]</span></h3>
+                            <span class="job-date">[2022 - 2024]</span>
+                        </div>
+                        <p class="job-location">&gt; Location: [City, State / Hybrid]</p>
+                        <ul class="job-bullets">
+                            <li>[PLACEHOLDER: Developed responsive web interface using modern JavaScript, optimizing bundle size and reducing load time by 35%.]</li>
+                            <li>[PLACEHOLDER: Implemented RESTful services and database schema migrations supporting core business features.]</li>
+                            <li>[PLACEHOLDER: Collaborated with cross-functional product teams to deliver complex user features ahead of quarterly schedule.]</li>
+                        </ul>
+                        <div class="job-tech">
+                            <span>React</span> <span>Node.js</span> <span>Python</span> <span>Docker</span> <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">o</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Junior Developer / Intern <span class="company">@ [COMPANY_NAME_3]</span></h3>
+                            <span class="job-date">[2021 - 2022]</span>
+                        </div>
+                        <p class="job-location">&gt; Location: [City, State]</p>
+                        <ul class="job-bullets">
+                            <li>[PLACEHOLDER: Built internal CLI scripts and monitoring dashboards to track application health and error logs.]</li>
+                            <li>[PLACEHOLDER: Fixed legacy software bugs, wrote unit test suites, and assisted senior developers with system profiling.]</li>
+                        </ul>
+                        <div class="job-tech">
+                            <span>JavaScript</span> <span>Python</span> <span>Git</span> <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal CLI Section -->
+        <section id="terminal" class="section">
+            <div class="section-header">
+                <h2><span class="section-num">05.</span> // INTERACTIVE_CLI</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="cli-container">
+                <div class="cli-header">
+                    <span class="cli-title">interactive_shell.sh - type 'help' to list commands</span>
+                    <span class="cli-badge">[SYSTEM_ACTIVE]</span>
+                </div>
+                <div class="cli-output" id="cli-output">
+                    <div class="cli-line">Terminal initialized. Welcome to [YOUR_NAME]'s interactive shell.</div>
+                    <div class="cli-line">Type <span class="cmd-highlight">'help'</span> for a list of available commands.</div>
+                </div>
+                <div class="cli-input-line">
+                    <span class="cli-prompt">guest@portfolio:~$</span>
+                    <input type="text" id="cli-input" class="cli-input" placeholder="Type a command (e.g. help, skills, projects, contact, clear)..." autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2><span class="section-num">06.</span> // GET_IN_TOUCH</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-heading">/ INITIALIZE_CONNECTION</h3>
+                    <p class="paragraph">
+                        I am currently <strong class="highlight">[OPEN_FOR_NEW_OPPORTUNITIES]</strong>. Whether you have a question, a project proposal, or just want to connect over software engineering, my inbox is open!
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <span class="detail-label">&gt; EMAIL:</span>
+                            <a href="mailto:your.email@example.com" class="detail-value">[YOUR.EMAIL@EXAMPLE.COM]</a>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">&gt; LOCATION:</span>
+                            <span class="detail-value">[YOUR_CITY, YOUR_COUNTRY]</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">&gt; PGP_FINGERPRINT:</span>
+                            <span class="detail-value">[ABCD 1234 EF56 7890 9876]</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener" class="social-btn">[ GITHUB ]</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn">[ LINKEDIN ]</a>
+                        <a href="https://x.com" target="_blank" rel="noopener" class="social-btn">[ TWITTER/X ]</a>
+                        <a href="#" target="_blank" rel="noopener" class="social-btn">[ RESUME.PDF ]</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-header">&gt; SEND_DIRECT_MESSAGE</div>
+                        
+                        <div class="form-group">
+                            <label for="form-name">&gt; NAME *</label>
+                            <input type="text" id="form-name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email">&gt; EMAIL_ADDRESS *</label>
+                            <input type="email" id="form-email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-subject">&gt; SUBJECT</label>
+                            <input type="text" id="form-subject" placeholder="Project Inquiry / Job Opportunity">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">&gt; MESSAGE_BODY *</label>
+                            <textarea id="form-message" rows="5" required placeholder="Hello, I would like to discuss..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">[ TRANSMIT_MESSAGE ]</button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>&copy; <span id="current-year">2026</span> [YOUR_NAME]. ALL RIGHTS RESERVED.</div>
+            <div>BUILT WITH HTML5 / CSS3 / VANILLA JS | PURE BLACK &amp; WHITE</div>
+            <div><a href="#hero" class="back-to-top">[ ^ BACK_TO_TOP ]</a></div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal Window -->
+    <div id="project-modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <span class="modal-title" id="modal-title">[PROJECT_TITLE]</span>
+                <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">[ X ]</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic Content Populated by JS -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeProjectModal()">[ CLOSE ]</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
