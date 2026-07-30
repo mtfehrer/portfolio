@@ -1,7 +1,6 @@
 /* ==========================================================================
    MINIMALIST SOFTWARE ENGINEER PORTFOLIO JAVASCRIPT
-   Pure HTML/CSS/JS with ambient canvas, typing animation, filter logic,
-   project detail modals, and an interactive terminal CLI shell.
+   Michael Fehrer - Portfolio Logic
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,10 +92,10 @@ function initTypingEffect() {
     if (!titleElement) return;
 
     const titles = [
-        "Software Engineer & Systems Architect",
+        "Software Engineer",
+        "CS Master's Student @ Binghamton",
         "Full-Stack Web Developer",
-        "Open-Source Contributor",
-        "Problem Solver & Tech Lead"
+        "Robotics & Systems Researcher"
     ];
 
     let titleIndex = 0;
@@ -234,64 +233,63 @@ function initProjectFilters() {
 }
 
 /* --------------------------------------------------------------------------
-   7. Project Detail Modal Data & Handler
+   7. Project Detail Modal Data & Handler (Populated from Resume)
    -------------------------------------------------------------------------- */
 const projectDetailsData = {
     project1: {
-        title: "[PROJECT_NAME_1] - Analytics Engine",
-        type: "Web Application / Real-time Engine",
-        status: "Production v2.4.0",
-        description: "[PLACEHOLDER_DETAILS: Detailed architectural breakdown of Project 1. Engineered with high-concurrency event loops, Redis cache layer, and responsive real-time monitoring charts.]",
+        title: "Autonomous UAV Collision Avoidance & SLAM",
+        type: "Research Project / Autonomous Systems",
+        status: "May – August 2025",
+        description: "Developed a 3D LiDAR drone simulation using the PyBullet physics engine to evaluate spatial mapping and A* pathfinding within a voxel grid environment, monitored via a custom TCP server. Modified ORB-SLAM C++ source code to continuously export point cloud and camera position data into a custom C++ program rendering live occupancy grid updates.",
         architecture: [
-            "Frontend: Vanilla JS / HTML5 / CSS3 canvas charts",
-            "Backend: Node.js / Express microservices",
-            "Data Layer: Redis pub/sub and PostgreSQL time-series database",
-            "DevOps: Docker containers deployed on AWS ECS with auto-scaling"
+            "3D LiDAR simulation in PyBullet physics engine evaluating voxel grid spatial mapping & A* pathfinding",
+            "Custom C++ occupancy grid mapper continuously ingesting ORB-SLAM point clouds & camera positions",
+            "Live real-time 3D grid rendering via custom PyVista Python visualization scripts",
+            "Containerized ROS environments via Docker on NVIDIA Jetson embedded hardware with automated RGBD & rosbag scripts"
         ],
-        github: "https://github.com",
-        demo: "https://example.com"
+        github: "https://github.com/mtfehrer",
+        demo: "#"
     },
     project2: {
-        title: "[PROJECT_NAME_2] - Distributed KV Store",
-        type: "Systems / Storage Engine",
-        status: "Experimental v0.9.1",
-        description: "[PLACEHOLDER_DETAILS: In-depth technical specs for Project 2. Custom implementation of the Raft Consensus algorithm in Rust with optimized log storage and network heartbeats.]",
+        title: "Volunteer Opportunities Platform",
+        type: "Group Project / Hackathon Winner",
+        status: "HackBU 2023 - 3rd Place Civic Engagement",
+        description: "Developed a platform for users to create and share volunteering opportunities. Built the frontend using Vue.js for displaying community activities scraped via a Python API, with Spring Boot and MySQL backend components containerized using Docker Compose.",
         architecture: [
-            "Core: Pure Rust using Tokio async runtime",
-            "Protocols: gRPC / Protocol Buffers for inter-node communication",
-            "Storage: LSM-tree storage engine with WAL (Write-Ahead Logging)",
-            "Benchmarking: 100k+ ops/sec throughput under simulated packet drop tests"
+            "Vue.js interactive frontend displaying local volunteering events and community initiatives",
+            "Python web scraper API extracting real-time local event data",
+            "Spring Boot RESTful microservices architecture",
+            "MySQL database containerized with Docker Compose for local development & deployment"
         ],
-        github: "https://github.com",
-        demo: "https://example.com"
+        github: "https://github.com/mtfehrer",
+        demo: "#"
     },
     project3: {
-        title: "[PROJECT_NAME_3] - Security CLI Scanner",
-        type: "CLI Tooling / Security Automation",
-        status: "Stable v1.2.0",
-        description: "[PLACEHOLDER_DETAILS: Overview of Project 3. Command-line utility written in Go to parse codebase dependency graphs and generate vulnerability reports in real time.]",
+        title: "Course Scheduler System",
+        type: "Course Project / C++ System",
+        status: "February 2023",
+        description: "Designed a command-line course scheduling application in C++ that manages student enrollment and course rosters. Utilized dynamic memory allocation to handle student and course objects implemented using OOP principles, with an automated Makefile build system.",
         architecture: [
-            "Language: Go (Golang) compiled to static binary",
-            "Features: Parallel worker pool for fast file parsing",
-            "Integrations: GitHub Actions CI/CD runner plugin",
-            "Outputs: Support for JSON, GFM Markdown, and ANSI terminal rendering"
+            "C++ Command-Line Application with dynamic student & roster management",
+            "Object-Oriented Programming (OOP) design with custom memory allocation/cleanup",
+            "Automated Makefile script for compilation, binary packaging, and workspace cleanup"
         ],
-        github: "https://github.com",
-        demo: "https://example.com"
+        github: "https://github.com/mtfehrer",
+        demo: "#"
     },
     project4: {
-        title: "[PROJECT_NAME_4] - Developer Workflow Hub",
-        type: "Full-Stack Web App",
-        status: "Production v1.0.0",
-        description: "[PLACEHOLDER_DETAILS: Project 4 walkthrough. Collaborative workspace for engineering teams featuring code snippet sharing, schema validation, and webhooks.]",
+        title: "Full Stack Forum Web Application",
+        type: "Independent Project",
+        status: "July – August 2022",
+        description: "Built a full stack web application to create and share public posts with user accounts using React.js and Node.js. Implemented a REST API for managing data transfer between client and server, integrated with JWT authentication and MongoDB ORM.",
         architecture: [
-            "Frontend: React + Single-page Monospace UI design system",
-            "Backend: Python FastAPI with Async SQLAlchemy ORM",
-            "Auth: JWT authentication with OAuth2 GitHub provider",
-            "Testing: 95%+ coverage with PyTest and Playwright end-to-end"
+            "React.js Single-Page Application (SPA) frontend with dynamic post feeds",
+            "Node.js & Express RESTful API backend handling post CRUD operations",
+            "JSON Web Token (JWT) authentication for secure user registration & login",
+            "MongoDB database with ORM data modeling"
         ],
-        github: "https://github.com",
-        demo: "https://example.com"
+        github: "https://github.com/mtfehrer",
+        demo: "#"
     }
 };
 
@@ -301,13 +299,13 @@ function openProjectModal(projectId) {
     const modalBody = document.getElementById('modal-body');
 
     const data = projectDetailsData[projectId] || {
-        title: "[PROJECT_DETAILS]",
+        title: "Project Details",
         type: "Software System",
         status: "Active",
-        description: "[Placeholder information for this project. Replace with your custom project notes.]",
+        description: "Project details from Michael Fehrer's resume.",
         architecture: ["Component A", "Component B"],
-        github: "https://github.com",
-        demo: "https://example.com"
+        github: "https://github.com/mtfehrer",
+        demo: "#"
     };
 
     modalTitle.textContent = data.title;
@@ -316,14 +314,14 @@ function openProjectModal(projectId) {
 
     modalBody.innerHTML = `
         <div style="margin-bottom: 15px; border-bottom: 1px solid var(--border-dim); padding-bottom: 10px;">
-            <div style="font-size: 0.85rem; opacity: 0.8;">[ TYPE: ${data.type} | STATUS: ${data.status} ]</div>
+            <div style="font-size: 0.85rem; opacity: 0.8;">[ TYPE: ${data.type} | DATES: ${data.status} ]</div>
         </div>
         <p style="margin-bottom: 20px; line-height: 1.6;">${data.description}</p>
-        <h4 style="margin-bottom: 10px; font-size: 1rem;">/// ARCHITECTURAL_HIGHLIGHTS</h4>
+        <h4 style="margin-bottom: 10px; font-size: 1rem;">/// TECHNICAL_HIGHLIGHTS</h4>
         <ul style="list-style: none; margin-bottom: 25px;">${archItems}</ul>
         <div style="display: flex; gap: 15px;">
-            <a href="${data.demo}" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem;">[ LIVE_DEMO ]</a>
-            <a href="${data.github}" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.85rem;">[ SOURCE_CODE ]</a>
+            <a href="${data.github}" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem;">[ VIEW_GITHUB ]</a>
+            <button onclick="closeProjectModal()" class="btn btn-secondary" style="font-size: 0.85rem;">[ CLOSE ]</button>
         </div>
     `;
 
@@ -387,41 +385,41 @@ function processCLICommand(cmd) {
                 - <span class="cmd-highlight">whoami</span>      : Display developer overview<br>
                 - <span class="cmd-highlight">skills</span>      : List technical stack &amp; languages<br>
                 - <span class="cmd-highlight">projects</span>    : List featured software projects<br>
-                - <span class="cmd-highlight">experience</span>  : View work history<br>
+                - <span class="cmd-highlight">experience</span>  : View work history &amp; internships<br>
                 - <span class="cmd-highlight">contact</span>     : Display contact information<br>
                 - <span class="cmd-highlight">clear</span>       : Clear terminal window<br>
                 - <span class="cmd-highlight">date</span>        : Show current UTC date/time<br>
-                - <span class="cmd-highlight">sudo hire</span>   : Grant full developer access!
+                - <span class="cmd-highlight">sudo hire</span>   : Send direct message / contact prompt
             `);
             break;
 
         case 'whoami':
-            appendCLILine(`&gt; USER: [YOUR_NAME] | ROLE: Software Engineer | LOCATION: [YOUR_LOCATION]`);
+            appendCLILine(`&gt; USER: Michael Fehrer | ROLE: Software Engineer | EDUCATION: MS in CS @ Binghamton University (GPA: 3.8)`);
             break;
 
         case 'skills':
-            appendCLILine(`&gt; LANGUAGES: JavaScript, TypeScript, Python, C++, Go, Rust, SQL<br>&gt; TECH STACK: React, Node.js, Express, Docker, Kubernetes, AWS, PostgreSQL, Redis`);
+            appendCLILine(`&gt; LANGUAGES: Python, JavaScript, TypeScript, Java, C++, C, HTML, CSS, SQL<br>&gt; FRAMEWORKS: React.js, Next.js, Express.js, Vue.js, Flask, Angular, Spring Boot<br>&gt; DEVOPS/TOOLS: Linux, Git, Docker, AWS, OpenShift, Pytest, MySQL, MongoDB, ROS`);
             break;
 
         case 'projects':
             appendCLILine(`
-                &gt; [PROJECT_NAME_1] - Real-Time Analytics Engine<br>
-                &gt; [PROJECT_NAME_2] - Distributed KV Store in Rust<br>
-                &gt; [PROJECT_NAME_3] - Security CLI Scanner<br>
-                &gt; [PROJECT_NAME_4] - Developer Workflow Hub
+                &gt; 1. Autonomous UAV Collision Avoidance &amp; SLAM (PyBullet, ORB-SLAM C++, ROS)<br>
+                &gt; 2. Volunteer Opportunities Platform (Vue.js, Python, Spring Boot, MySQL, Docker)<br>
+                &gt; 3. Course Scheduler System (C++, OOP, Dynamic Memory, Makefile)<br>
+                &gt; 4. Full Stack Forum Web App (React.js, Node.js, Express, MongoDB, JWT)
             `);
             break;
 
         case 'experience':
             appendCLILine(`
-                &gt; [2024 - PRES] Senior Software Engineer @ [COMPANY_NAME_1]<br>
-                &gt; [2022 - 2024] Software Engineer @ [COMPANY_NAME_2]<br>
-                &gt; [2021 - 2022] Junior Engineer @ [COMPANY_NAME_3]
+                &gt; [2024] Software Engineer Intern @ Broadridge Financial Solutions<br>
+                &gt; [2023] Full Stack Web Developer Intern @ Red Hat<br>
+                &gt; [2025] Autonomous UAV Software Researcher @ Binghamton University
             `);
             break;
 
         case 'contact':
-            appendCLILine(`&gt; EMAIL: [YOUR.EMAIL@EXAMPLE.COM]<br>&gt; GITHUB: https://github.com<br>&gt; LINKEDIN: https://linkedin.com`);
+            appendCLILine(`&gt; EMAIL: mtfehrer@gmail.com<br>&gt; PHONE: (607) 422-4595<br>&gt; LINKEDIN: https://www.linkedin.com/in/michael-fehrer/<br>&gt; GITHUB: https://github.com/mtfehrer`);
             break;
 
         case 'clear':
@@ -434,10 +432,10 @@ function processCLICommand(cmd) {
 
         case 'sudo':
             if (args[1] === 'hire') {
-                appendCLILine(`&gt; [ACCESS GRANTED]: Offer letter received! Opening email client...`);
+                appendCLILine(`&gt; [ACCESS GRANTED]: Initiating contact sequence... Redirecting to contact section.`);
                 setTimeout(() => {
                     window.location.href = '#contact';
-                }, 1000);
+                }, 800);
             } else {
                 appendCLILine(`&gt; sudo: '${args.slice(1).join(' ')}' permission denied. Try 'sudo hire'.`);
             }
@@ -484,7 +482,7 @@ function handleFormSubmit(event) {
     setTimeout(() => {
         submitBtn.textContent = "[ TRANSMIT_MESSAGE ]";
         submitBtn.disabled = false;
-        status.innerHTML = `<span style="color: #ffffff;">[+] SUCCESS: Message transmitted! Placeholder response logged.</span>`;
+        status.innerHTML = `<span style="color: #ffffff;">[+] SUCCESS: Message transmitted to mtfehrer@gmail.com</span>`;
         document.getElementById('contact-form').reset();
 
         setTimeout(() => {

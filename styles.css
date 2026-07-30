@@ -656,16 +656,18 @@ button, input, textarea {
 .timeline-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--border-dim);
     padding-bottom: 10px;
+    width: 100%;
 }
 
 .job-title {
     font-size: 1.2rem;
+    flex: 1 1 auto;
 }
 
 .job-title .company {
@@ -677,6 +679,9 @@ button, input, textarea {
     font-size: 0.85rem;
     border: 1px solid var(--border-color);
     padding: 2px 8px;
+    margin-left: auto;
+    text-align: right;
+    white-space: nowrap;
 }
 
 .job-location {
