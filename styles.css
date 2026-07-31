@@ -10,7 +10,6 @@
     --text-color: #ffffff;
     --border-color: #ffffff;
     --dim-text: #cccccc;
-    --dark-surface: #050505;
     --border-dim: #333333;
     --font-stack: 'Courier New', Courier, monospace;
 }
@@ -101,14 +100,6 @@ button, input, textarea {
     letter-spacing: -0.5px;
 }
 
-.nav-logo .prompt-symbol {
-    font-weight: bold;
-}
-
-.nav-logo .path {
-    text-decoration: underline;
-}
-
 .nav-links {
     display: flex;
     gap: 20px;
@@ -165,11 +156,6 @@ button, input, textarea {
     flex-wrap: wrap;
 }
 
-.section-num {
-    font-size: 1.4rem;
-    opacity: 0.8;
-}
-
 .header-line {
     height: 1px;
     background: var(--border-color);
@@ -188,55 +174,8 @@ button, input, textarea {
     box-shadow: 0 5px 25px rgba(255, 255, 255, 0.08);
 }
 
-.terminal-header {
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.terminal-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.btn-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    display: inline-block;
-}
-
-.terminal-title {
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-
-.terminal-status {
-    font-size: 0.8rem;
-    border: 1px solid var(--border-color);
-    padding: 1px 6px;
-}
-
 .terminal-body {
     padding: 35px 30px;
-}
-
-.console-line {
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.console-line .prompt {
-    font-weight: bold;
-    margin-right: 8px;
-}
-
-.console-line .command {
-    text-decoration: underline;
 }
 
 .hero-name {
@@ -256,30 +195,10 @@ button, input, textarea {
     font-weight: normal;
 }
 
-.cursor {
-    display: inline-block;
-    width: 10px;
-    height: 1.4rem;
-    background-color: var(--text-color);
-    margin-left: 5px;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0; }
-}
-
 .hero-bio {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--dim-text);
-}
-
-.hero-actions {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
 }
 
 /* Button Utilities */
@@ -307,61 +226,12 @@ button, input, textarea {
     border-color: var(--border-color);
 }
 
-.btn-secondary:hover, .btn-outline:hover {
+.btn-secondary:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
 }
 
-.btn-block {
-    display: block;
-    width: 100%;
-}
-
-/* Stats Banner */
-.stats-banner {
-    padding: 30px 0;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    margin: 40px 0;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.stat-card {
-    border: 1px solid var(--border-dim);
-    padding: 20px;
-    transition: border-color 0.2s ease;
-}
-
-.stat-card:hover {
-    border-color: var(--border-color);
-}
-
-.stat-value {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    opacity: 0.8;
-}
-
-/* About Grid */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
+/* Text Helpers */
 .paragraph {
     margin-bottom: 20px;
     font-size: 1rem;
@@ -376,90 +246,7 @@ button, input, textarea {
     padding: 2px 6px;
 }
 
-.quick-facts {
-    margin-top: 30px;
-    border: 1px solid var(--border-color);
-    padding: 20px;
-}
-
-.quick-facts h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--border-dim);
-    padding-bottom: 8px;
-}
-
-.facts-list {
-    list-style: none;
-}
-
-.facts-list li {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.95rem;
-}
-
-.facts-list .key {
-    font-weight: bold;
-}
-
-.facts-list .val {
-    color: var(--dim-text);
-}
-
-.code-box {
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-color);
-}
-
-.code-box-header {
-    border-bottom: 1px solid var(--border-color);
-    padding: 8px 15px;
-    font-size: 0.85rem;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.code-block {
-    padding: 20px;
-    overflow-x: auto;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.json-key {
-    color: var(--text-color);
-    font-weight: bold;
-}
-
-.json-str {
-    color: #ffffff;
-    opacity: 0.9;
-    font-style: italic;
-}
-
 /* Skills Section */
-.skills-filter {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 8px 16px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.filter-btn.active, .filter-btn:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -722,82 +509,11 @@ button, input, textarea {
     padding: 2px 6px;
 }
 
-/* Interactive CLI Section */
-.cli-container {
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-color);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-}
-
-.cli-header {
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.cli-badge {
-    border: 1px solid var(--border-color);
-    padding: 2px 6px;
-    font-size: 0.75rem;
-}
-
-.cli-output {
-    padding: 20px;
-    min-height: 200px;
-    max-height: 350px;
-    overflow-y: auto;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.cli-line {
-    word-break: break-word;
-}
-
-.cmd-highlight {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.cli-input-line {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid var(--border-color);
-    padding: 12px 15px;
-    background-color: var(--bg-color);
-}
-
-.cli-prompt {
-    font-weight: bold;
-    margin-right: 10px;
-    white-space: nowrap;
-}
-
-.cli-input {
-    flex: 1;
-    border: none;
-    font-size: 0.95rem;
-    color: var(--text-color);
-    background: transparent;
-}
-
 /* Contact Section */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-}
-
-.contact-heading {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
 }
 
 .contact-details {
@@ -820,69 +536,6 @@ button, input, textarea {
     word-break: break-all;
 }
 
-.social-links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.social-btn {
-    font-size: 0.85rem;
-    padding: 8px 12px;
-    border: 1px solid var(--border-color);
-}
-
-.social-btn:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-
-.contact-form {
-    border: 1px solid var(--border-color);
-    padding: 30px;
-    background-color: var(--bg-color);
-}
-
-.form-header {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-dim);
-    padding-bottom: 10px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px 12px;
-    font-size: 0.95rem;
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    border-color: #ffffff;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
-
-.form-status {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    min-height: 24px;
-}
-
 /* Footer */
 .footer {
     border-top: 1px solid var(--border-color);
@@ -899,16 +552,6 @@ button, input, textarea {
     flex-wrap: wrap;
     gap: 15px;
     font-size: 0.85rem;
-}
-
-.back-to-top {
-    border: 1px solid var(--border-color);
-    padding: 4px 10px;
-}
-
-.back-to-top:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
 }
 
 /* Modal Styling */
@@ -990,7 +633,7 @@ button, input, textarea {
 
 /* Responsive Media Queries */
 @media (max-width: 900px) {
-    .about-grid, .contact-grid {
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -1023,10 +666,6 @@ button, input, textarea {
 
     .hero-title {
         font-size: 1.1rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
     }
 
     .footer-content {
